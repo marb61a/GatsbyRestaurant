@@ -19,14 +19,23 @@ export default class Navbar extends Component {
 
         return (
             <nav>
-                <NavbarHeader handleNavbar={
-                    this.handleNavbar
-                }/>
-                <NavbarLinks navbarOpen={
-                    this.state.navbarOpen
-                }/>
-                <NavbarIcons />
+                <NavWrapper>
+                    <NavbarHeader handleNavbar={
+                        this.handleNavbar
+                    }/>
+                    <NavbarLinks navbarOpen={
+                        this.state.navbarOpen
+                    }/>
+                    <NavbarIcons />
+                </NavWrapper>
             </nav>
         )
     }
 }
+
+const NavWrapper = styled.nav`
+    @media(min-width:768px){
+        display: flex;
+        align-items: center;
+    }
+`;
