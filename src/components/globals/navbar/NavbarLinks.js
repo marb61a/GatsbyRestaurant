@@ -60,9 +60,11 @@ const LinkWrapper = styled.div`
         font-weight: 700;
         text-transform: capitalize;
         cursor: pointer;
+        ${styles.transDefault};
         &:hover {
             background: ${styles.colors.mainGrey};
-            color: ${styles.colors.mainYellow}
+            color: ${styles.colors.mainYellow};
+            padding: 0.5rem 1rem 0.5rem 1.3rem
         }
     }
 `;
