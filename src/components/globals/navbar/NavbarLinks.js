@@ -31,10 +31,34 @@ export default class NavbarLinks extends Component {
     }
 
     render() {
-        return (
-            <div>
-                
-            </div>
-        )
+        <LinkWrapper open={this.props.navbaropen}>
+            {
+                this.state.links.map(item => {
+                    return(
+                        <li key={item.id}>
+                            <Link to={item.path} className="nav-link">
+                                {item.name}
+                            </Link>
+                        </li>
+                    )
+                })
+            }
+        </LinkWrapper>
     }
 }
+
+const LinkWrapper = styled.div`
+    li {
+        list-style-type: none;
+    }
+
+    .nav-link {
+        display: block;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        color: ${styles.colors.mainGrey};
+        font-weight: 700;
+        text-transform: capitalize;
+        cursor: pointer
+    }
+`;
