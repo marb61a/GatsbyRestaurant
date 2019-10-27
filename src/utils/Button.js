@@ -12,10 +12,26 @@ const BannerButton = styled.button`
   font-weight: 700;
   ${styles.border({ color: `${styles.colors.mainWhite}` })};
   margin-top: 1rem;
-  ${styles.transition({})};
+  ${
+    styles.transition({})
+  };
   &:hover {
     background: ${styles.colors.mainWhite};
     color: ${styles.colors.mainBlack};
     cursor: pointer;
   }
 `;
+
+const SectionButton = styled(BannerButton)`
+  color: ${styles.colors.mainBlack};
+  ${styles.border({ 
+    color: `${styles.colors.mainBlack}` 
+  })};
+  &:hover {
+    background: ${styles.colors.mainBlack};
+    color: ${styles.colors.mainYellow};
+    cursor: pointer;
+  }
+`;
+
+export { BannerButton, SectionButton }
