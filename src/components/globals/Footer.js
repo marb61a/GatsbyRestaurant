@@ -50,7 +50,7 @@ export default class Footer extends Component {
     }
 }
 
-const FooterWrapper = styled.div`
+const FooterWrapper = styled.footer`
     padding: 2rem 0;
     background: ${styles.colors.mainBlack};
     .icons {
@@ -58,5 +58,29 @@ const FooterWrapper = styled.div`
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
+    }
+    .icon {
+        color: ${styles.colors.mainWhite};
+        font-size: 1.3rem;
+        ${styles.transition({})};
+        &:hover {
+            color: ${styles.colors.mainPrimary};
+        }
+    }
+    .copyright {
+        color: ${styles.colors.mainWhite};
+        text-transform: capitalize;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .title {
+        text-align: center;
+        width: 10rem;
+        color: ${styles.colors.mainYellow};
+        text-transform: uppercase;
+        padding: 0.3rem 1rem;
+        margin: 0 auto 2rem auto;
+        font-size: 1.5rem;
+        ${styles.border({ color: `${styles.colors.mainYellow} `})}
     }
 `;
