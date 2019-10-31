@@ -26,14 +26,37 @@ export default class Footer extends Component {
 
     render() {
         return (
-            <div>
-                
-            </div>
+            <FooterWrapper>
+                <div className="title"> Gatsby Eatery</div>
+                <div className="icons">
+                    {
+                        this.state.icons.map(item => (
+                            <a 
+                                href={item.path}
+                                key={item.id}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {item.icon}
+                            </a>
+                        ))
+                    }
+                </div>
+                <p className="copyright">
+                    Copyright &copy; 2019 Gatsby Eatery
+                </p>
+            </FooterWrapper>
         )
     }
 }
 
 const FooterWrapper = styled.div`
     padding: 2rem 0;
-
+    background: ${styles.colors.mainBlack};
+    .icons {
+        width: 10rem;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
 `;
