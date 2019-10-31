@@ -47,11 +47,10 @@ export default class NavbarLinks extends Component {
     }
 }
 
-const LinkWrapper = styled.div`
+const LinkWrapper = styled.ul`
     li {
         list-style-type: none;
     }
-
     .nav-link {
         display: block;
         text-decoration: none;
@@ -76,7 +75,7 @@ const LinkWrapper = styled.div`
         height: auto;
         display: flex;
         margin: 0 auto;
-        .nav-link: hover{
+        .nav-link:hover{
             background: ${styles.colors.mainWhite};
             padding: 0.5rem 1rem 0.5rem 1rem
         }

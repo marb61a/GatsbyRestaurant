@@ -62,8 +62,13 @@ const IconWrapper = styled.div`
     .instagram-icon {
         color: #da5f53;
     }
-    .icon: hover {
+    .icon:hover {
         color: ${styles.colors.mainYellow};
     }
     display: none;
+    @media (min-width: 768px) {
+        width: 10rem;
+        display: flex;
+        justify-content: space-around;
+    }
 `;
