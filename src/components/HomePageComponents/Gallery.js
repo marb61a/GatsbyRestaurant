@@ -9,9 +9,17 @@ export default function Gallery() {
     return(
         <StaticQuery 
             query={
-                graphql`
-                
-                `
+                graphql`{
+                    img1: file() {
+
+                    }
+                    img2: file() {
+
+                    }
+                    img3: file() {
+
+                    }
+                }`
             }
             render={
                 data => {
@@ -22,7 +30,18 @@ export default function Gallery() {
                     return(
                         <Section>
                             <GalleryWrapper>
-
+                                <div className="item item-1">
+                                    <Img fluid={img1} />
+                                    <p className="info">Amazing pizza</p>
+                                </div>
+                                <div className="item item-2">
+                                    <Img fluid={img2} />
+                                    <p className="info">Awesome pork</p>
+                                </div>
+                                <div className="item item-3">
+                                    <Img fluid={img3} />
+                                    <p className="info">Succulent steak</p>
+                                </div>
                             </GalleryWrapper>
                         </Section>
                     )
@@ -54,5 +73,21 @@ const GalleryWrapper = styled.div`
     @media (min-width: 768px) {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+    @media(min-width: 992px) {
+        .gatsby-image-wrapper {
+            height: 100%;
+        }
+        grid-template-areas:
+        'one  one two two  '
+        'one  one three three ';
+        .item-1 {
+            grid-area: one;
+        }
+        .item-2 {
+            grid-area: two;
+        }
+        .item-3 {
+            grid-area: three;
+        }
+    }
 `;

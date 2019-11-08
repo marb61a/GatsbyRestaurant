@@ -3,7 +3,7 @@ import Link from "gatsby"
 import { FaAlignRight } from 'react-icons/fa'
 import styled from 'styled-components'
 
-import logo from '../../../images/logo.svg'
+import logo from '../../../images/logo.png'
 import { styles } from '../../../utils'
 
 export default function NavbarHeader ({ handleNavbar }) {
