@@ -10,14 +10,26 @@ export default function Gallery() {
         <StaticQuery 
             query={
                 graphql`{
-                    img1: file() {
-
+                    img1: file(relativePath: { eq: "homeGallery/img-1.jpeg" }) {
+                        childImageSharp {
+                            fluid(max-width: 500) {
+                                ...GatsbyImageSharpFluid_tracedSVG
+                            }
+                        }
                     }
-                    img2: file() {
-
+                    img2: file(relativePath: { eq: "homeGallery/img-2.jpeg" }) {
+                        childImageSharp {
+                            fluid(maxWidth: 500) {
+                                ...GatsbyImageSharpFluid_tracedSVG
+                            }
+                        }
                     }
-                    img3: file() {
-
+                    img3: file(relativePath: { eq: "homeGallery/img-3.jpeg" }) {
+                        childImageSharp {
+                            fluid(maxWidth: 500) {
+                                ...GatsbyImageSharpFluid_tracedSVG
+                            }
+                        }
                     }
                 }`
             }
