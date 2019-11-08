@@ -1,25 +1,24 @@
 import React, { Component } from 'react'
 import Link from "gatsby"
-import {FaAlignRight} from "react-icons"
-import styled from "styled-components"
-import logo from ""
+import { FaAlignRight } from 'react-icons/fa'
+import styled from 'styled-components'
 
-export default class NavbarHeader extends Component {
-    render() {
-        const {handleNavbar} = this.props;
-        return (
-            <HeaderWrapper>
-                <Link to="/">
-                    <img src={logo} alt="Company name"/>
-                </Link>
-                <FaAlignRight 
-                    className="toggle-icon"
-                    onClick={()=>{handleNavbar()}}
-                >
-                </FaAlignRight>
-            </HeaderWrapper>
-        )
-    }
+import logo from '../../../images/logo.svg'
+import { styles } from '../../../utils'
+
+export default function NavbarHeader ({ handleNavbar }) {
+    return (
+        <HeaderWrapper>
+            <Link to="/">
+                <img src={logo} alt="Company name"/>
+            </Link>
+            <FaAlignRight 
+                className="toggle-icon"
+                onClick={()=>{handleNavbar()}}
+            >
+            </FaAlignRight>
+        </HeaderWrapper>
+    )
 }
 
 const HeaderWrapper = styled.div`
@@ -36,5 +35,6 @@ const HeaderWrapper = styled.div`
         .toggle-icon{
             display: none;
         }
+        padding: 0.4rem 1rem;
     }
 `;
