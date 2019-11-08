@@ -48,4 +48,9 @@ export const ProductWrapper = styled.div`
         color: ${styles.colors.mainYellow};
         margin-top: 0.5rem;
     }
+    .info {
+        margin-top: 0.5rem;
+        word-spacing: 0.2rem;
+        text-transform: lowercase;
+    }
 `;

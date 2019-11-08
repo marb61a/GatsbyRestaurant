@@ -13,7 +13,21 @@ export default function Menu() {
             <ProductList>
                 <StaticQuery 
                     query={graphql`{
-
+                        items: allContentfulMenu{
+                            edges {
+                                menu {
+                                    name
+                                    price
+                                    id
+                                    ingredients
+                                    img {
+                                        fixed(width: 150, height: 150) {
+                                            ...GatsbyContentfulFixed_tracedSVG
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }`
                     }
                     render={
