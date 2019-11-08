@@ -1,16 +1,17 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { PageHeader, Banner } from '../utils'
+import img from '../images/bcg/menuBcg.jpeg'
 
-const MenuPage = () => (
-  <Layout>
-    <SEO 
-      title="Home"
-      keywords={[`gatsby`, `application`, `react`]}
-    />
-  </Layout>
-)
-
-export default MenuPage
+export default function about() {
+  return(
+    <Layout>
+      <SEO title="menu" />
+      <PageHeader img={img}>
+        <Banner title="our menu" subtitle={`let's dig in`} />
+      </PageHeader>
+    </Layout>
+  )
+}

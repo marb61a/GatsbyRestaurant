@@ -6,15 +6,15 @@ import Navbar from "../components/globals/navbar"
 import Footer from "../components/globals/Footer"
 
 const Layout = ({children}) => {
-  return(
-    <React.Fragment>
-      <Navbar />
-      {children}
-    </React.Fragment>
-  )
+  <div>
+    <GlobalStyle />
+    <Navbar />
+    { children }
+    <Footer />
+  </div>
 }
 
-const GlobaleStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
