@@ -27,7 +27,7 @@ export default class Footer extends Component {
     render() {
         return (
             <FooterWrapper>
-                <div className="title"> Gatsby Eatery</div>
+                <div className="title"> Gatsby Restaraunt</div>
                 <div className="icons">
                     {
                         this.state.icons.map(item => (
@@ -43,7 +43,7 @@ export default class Footer extends Component {
                     }
                 </div>
                 <p className="copyright">
-                    Copyright &copy; 2019 Gatsby Eatery
+                    Copyright &copy; 2019 Gatsby Restaraunt
                 </p>
             </FooterWrapper>
         )
