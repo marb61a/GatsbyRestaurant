@@ -10,40 +10,42 @@ export default class NavbarLinks extends Component {
             {
                 id: 0,
                 path: '/',
-                name: 'home'
+                name: 'home',
             },
             {
                 id: 1,
                 path: '/about/',
-                name: 'about'
+                name: 'about',
             },
             {
                 id: 2,
                 path: '/menu/',
-                name: 'menu'
+                name: 'menu',
             },
             {
                 id: 3,
                 path: '/contact/',
-                name: 'contact'
+                name: 'contact',
             }
         ]
     }
 
     render() {
-        <LinkWrapper open={this.props.navbaropen}>
-            {
-                this.state.links.map(item => {
-                    return(
-                        <li key={item.id}>
-                            <Link to={item.path} className="nav-link">
-                                {item.name}
-                            </Link>
-                        </li>
-                    )
-                })
-            }
-        </LinkWrapper>
+        return (
+            <LinkWrapper open={this.props.navbaropen}>
+                {
+                    this.state.links.map(item => {
+                        return(
+                            <li key={item.id}>
+                                <Link to={item.path} className="nav-link">
+                                    {item.name}
+                                </Link>
+                            </li>
+                        )
+                    })
+                }
+            </LinkWrapper>
+        )
     }
 }
 

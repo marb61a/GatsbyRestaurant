@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import Link from "gatsby"
+import React from 'react'
+import { Link } from "gatsby"
 import { FaAlignRight } from 'react-icons/fa'
 import styled from 'styled-components'
 
 import logo from '../../../images/logo.png'
 import { styles } from '../../../utils'
 
-export default function NavbarHeader ({ handleNavbar }) {
+export default function NavbarHeader({ handleNavbar }) {
     return (
         <HeaderWrapper>
             <Link to="/">
@@ -15,8 +15,7 @@ export default function NavbarHeader ({ handleNavbar }) {
             <FaAlignRight 
                 className="toggle-icon"
                 onClick={()=>{handleNavbar()}}
-            >
-            </FaAlignRight>
+            />
         </HeaderWrapper>
     )
 }
