@@ -13,7 +13,7 @@ export default function Product({ product }) {
             <Img fixed={fixed} className="img"/>
 
             <div className="text">
-                <div>
+                <div className="product-content">>
                     <h3 className="name">{name}</h3>
                     <h3 className="price">${price}</h3>
                 </div>

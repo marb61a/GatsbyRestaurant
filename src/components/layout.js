@@ -5,14 +5,14 @@ import { createGlobalStyle } from "styled-components"
 import Navbar from "../components/globals/navbar"
 import Footer from "../components/globals/Footer"
 
-const Layout = ({children}) => {
+const Layout = ({children}) => (
   <div>
     <GlobalStyle />
     <Navbar />
     { children }
     <Footer />
   </div>
-}
+);
 
 const GlobalStyle = createGlobalStyle`
   * {
