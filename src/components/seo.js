@@ -11,6 +11,7 @@ import Helmet from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, keywords, title}) {
+  return(
   <StaticQuery 
     query={detailsQuery}
     render={data => {
@@ -56,12 +57,19 @@ function SEO({ description, lang, meta, keywords, title}) {
               content: metaDescription,
             },
           ]
-            .concat()
+            .concat(
+              keywords.length > 0
+              ? {
+                name: 'keywords',
+                content: keywords.join(`, `),
+              } : []
+            ).concat(meta)
           }
         />
       )
     }}
   />
+  )
 }
 
 SEO.defaultProps = {

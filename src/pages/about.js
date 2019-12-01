@@ -12,7 +12,7 @@ export default function about() {
         title="About"
       />
       <PageHeader img={img}>
-        <Banner title="cabout us" subtitle="a little bit about us" />
+        <Banner title="about us" subtitle="a little bit about us" />
       </PageHeader>
     </Layout>
   )
